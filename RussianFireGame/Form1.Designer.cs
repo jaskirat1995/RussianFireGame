@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.StartButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LoadButton = new System.Windows.Forms.Button();
-            this.SpinButton = new System.Windows.Forms.Button();
-            this.FireButton = new System.Windows.Forms.Button();
             this.ShotAwayButton = new System.Windows.Forms.Button();
+            this.FireButton = new System.Windows.Forms.Button();
+            this.SpinButton = new System.Windows.Forms.Button();
+            this.LoadButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.playMoreButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,36 +67,16 @@
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.Visible = false;
             // 
-            // pictureBox1
+            // ShotAwayButton
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(106, 79);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 223);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // LoadButton
-            // 
-            this.LoadButton.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadButton.Location = new System.Drawing.Point(122, 328);
-            this.LoadButton.Name = "LoadButton";
-            this.LoadButton.Size = new System.Drawing.Size(87, 41);
-            this.LoadButton.TabIndex = 1;
-            this.LoadButton.Text = "Load";
-            this.LoadButton.UseVisualStyleBackColor = true;
-            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
-            // 
-            // SpinButton
-            // 
-            this.SpinButton.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpinButton.Location = new System.Drawing.Point(228, 328);
-            this.SpinButton.Name = "SpinButton";
-            this.SpinButton.Size = new System.Drawing.Size(91, 41);
-            this.SpinButton.TabIndex = 2;
-            this.SpinButton.Text = "Spin";
-            this.SpinButton.UseVisualStyleBackColor = true;
-            this.SpinButton.Click += new System.EventHandler(this.SpinButton_Click);
+            this.ShotAwayButton.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShotAwayButton.Location = new System.Drawing.Point(228, 375);
+            this.ShotAwayButton.Name = "ShotAwayButton";
+            this.ShotAwayButton.Size = new System.Drawing.Size(125, 37);
+            this.ShotAwayButton.TabIndex = 4;
+            this.ShotAwayButton.Text = "ShootAway";
+            this.ShotAwayButton.UseVisualStyleBackColor = true;
+            this.ShotAwayButton.Click += new System.EventHandler(this.ShotAwayButton_Click);
             // 
             // FireButton
             // 
@@ -109,16 +89,38 @@
             this.FireButton.UseVisualStyleBackColor = true;
             this.FireButton.Click += new System.EventHandler(this.FireButton_Click);
             // 
-            // ShotAwayButton
+            // SpinButton
             // 
-            this.ShotAwayButton.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShotAwayButton.Location = new System.Drawing.Point(228, 375);
-            this.ShotAwayButton.Name = "ShotAwayButton";
-            this.ShotAwayButton.Size = new System.Drawing.Size(125, 37);
-            this.ShotAwayButton.TabIndex = 4;
-            this.ShotAwayButton.Text = "ShootAway";
-            this.ShotAwayButton.UseVisualStyleBackColor = true;
-            this.ShotAwayButton.Click += new System.EventHandler(this.ShotAwayButton_Click);
+            this.SpinButton.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpinButton.Location = new System.Drawing.Point(228, 328);
+            this.SpinButton.Name = "SpinButton";
+            this.SpinButton.Size = new System.Drawing.Size(91, 41);
+            this.SpinButton.TabIndex = 2;
+            this.SpinButton.Text = "Spin";
+            this.SpinButton.UseVisualStyleBackColor = true;
+            this.SpinButton.Click += new System.EventHandler(this.SpinButton_Click);
+            // 
+            // LoadButton
+            // 
+            this.LoadButton.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadButton.Location = new System.Drawing.Point(122, 328);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(87, 41);
+            this.LoadButton.TabIndex = 1;
+            this.LoadButton.Text = "Load";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(106, 79);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(247, 223);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // playMoreButton
             // 
@@ -144,6 +146,7 @@
             this.Controls.Add(this.StartButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
