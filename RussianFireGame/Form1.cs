@@ -92,25 +92,25 @@ namespace RussianFireGame
                
                 count++;
                 scndFire = codeObject.Scndfire();
-                if (count<2) {
-                    MessageBox.Show("Now this is your last chance to Fire again ");
+                if (count<1) {
+                    MessageBox.Show("you won the game 100 dollars ");
                 }
             }
             else {
                
             }
-            if (count==2) {
-                MessageBox.Show("Now your all chances are over ");
+            if (count>=2) {
+                MessageBox.Show("you won 100 dollarss ");
                 if (scndShoot == scndFire)
                 {
                     MessageBox.Show("you are the winner of this game");
                 }
                 else {
-                    MessageBox.Show("unfortunately you loose of this game");
+                    MessageBox.Show("you are the winner");
                 }
 
                 groupBox1.Visible = false;
-                shoot = 0; fire = 0; scndShoot = 0; scndFire = 0; count = 0;
+                shoot = 0; fire = 0; scndShoot = 0; scndFire = 0; count = 3;
                 playMoreButton.Visible = true;
                 ShotAwayButton.Enabled = false;
             }
@@ -137,15 +137,15 @@ namespace RussianFireGame
             else {
                
             }
-            if (shoot==6) {
-                MessageBox.Show("Gun is Empty Now");
+            if (shoot>=3) {
+                MessageBox.Show("you losse the game");
                 MessageBox.Show("You have one more chance to play click Shoot Away  button");
                 //pictureBox1.ImageLocation = "RussianEmpty.jpg";
                 pictureBox1.Image = RussianFireGame.Properties.Resources.RussianEmpty;
             }
             //MessageBox.Show("" + shoot);
             //after using teh all bullet the fire button will disable automatically now turn to shootaway button to fire 
-            FireButton.Enabled = false;
+            FireButton.Enabled = true;
 
         }
     }
