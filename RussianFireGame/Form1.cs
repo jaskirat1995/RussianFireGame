@@ -99,7 +99,7 @@ namespace RussianFireGame
             else {
                
             }
-            if (count>=2) {
+            if (count<=2) {
                 MessageBox.Show("you won 100 dollarss ");
                 if (scndShoot == scndFire)
                 {
