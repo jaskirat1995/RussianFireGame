@@ -99,7 +99,8 @@ namespace RussianFireGame
             else {
                
             }
-            if (count<=2) {
+            if (count<1) {
+                
                 MessageBox.Show("you won 100 dollarss ");
                 if (scndShoot == scndFire)
                 {
@@ -110,7 +111,7 @@ namespace RussianFireGame
                 }
 
                 groupBox1.Visible = false;
-                shoot = 0; fire = 0; scndShoot = 0; scndFire = 0; count = 3;
+                shoot = 0; fire = 0; scndShoot = 0; scndFire = 0; count = 6;
                 playMoreButton.Visible = true;
                 ShotAwayButton.Enabled = false;
             }
@@ -137,11 +138,12 @@ namespace RussianFireGame
             else {
                
             }
-            if (shoot>=3) {
+            if (shoot>=6) {
                 MessageBox.Show("you losse the game");
                 MessageBox.Show("You have one more chance to play click Shoot Away  button");
                 //pictureBox1.ImageLocation = "RussianEmpty.jpg";
                 pictureBox1.Image = RussianFireGame.Properties.Resources.RussianEmpty;
+               
             }
             //MessageBox.Show("" + shoot);
             //after using teh all bullet the fire button will disable automatically now turn to shootaway button to fire 
